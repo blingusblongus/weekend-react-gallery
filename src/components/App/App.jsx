@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, {useEffect, useState} from 'react';
+import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 
 function App() {
@@ -20,13 +21,15 @@ function App() {
   useEffect(() => {
     getPhotos();
   }, []);
+
+  console.log('galleryItems:', galleryItems);
   
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
+        <GalleryList galleryItems={galleryItems} getPhotos={getPhotos} />
         <img src="images/goat_small.jpg"/>
       </div>
     );
