@@ -37,7 +37,7 @@ export default function GalleryItem({item, getPhotos}){
                 {item.description}
             </div>}
             
-            <div onClick={addLike} class="like-button">
+            <div onClick={addLike} className="like-button">
                 <div className="lower-right">
                     <i className="fas fa-heart"></i>
                 </div>
