@@ -45,7 +45,7 @@ router.put('/like/:id', (req, res) => {
 //GET Route DB
 router.get('/', (req, res) => {
     const queryText = `SELECT * FROM gallery
-        ORDER BY id`;
+        ORDER BY id;`;
 
     pool.query(queryText)
         .then(response => {
@@ -55,5 +55,21 @@ router.get('/', (req, res) => {
         })
 }); // END GET Route
 
+//POST Route DB
+router.post('/', (req, res) => {
+    const queryText = `INSERT INTO gallery
+        (path, description)
+        VALUES ($1, $2);`;
 
+    const values = [req.body.path, req.body.description];
+
+    pool.query(queryText, values)
+        .then(response => {
+            console.log('CAT ADDED');
+            res.sendStatus(201);
+        }).catch(err => {
+            console.log('POST ERR', err);
+            res.sendStatus(500)
+        })
+})
 module.exports = router;
