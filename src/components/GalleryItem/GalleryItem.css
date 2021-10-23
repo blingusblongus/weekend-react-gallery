@@ -50,6 +50,10 @@
     cursor: pointer;
 }
 
+/* .lower-right:active {
+    transform: scale(1.24);
+} */
+
 .fa-heart {
     color: rgb(233, 44, 44);
 }
