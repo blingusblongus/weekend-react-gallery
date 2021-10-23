@@ -24,6 +24,12 @@ export default function GalleryItem({item}){
             <div className="item-description">
                 {item.description}
             </div>}
+            <div className="lower-right">
+                <i className="fas fa-heart"></i>
+            </div>
+            <div className="lower-right">
+                <div className="like-number">{item.likes}</div>
+            </div>
         </div>
     )
 
