@@ -44,7 +44,8 @@ router.put('/like/:id', (req, res) => {
 
 //GET Route DB
 router.get('/', (req, res) => {
-    const queryText = 'SELECT * FROM gallery';
+    const queryText = `SELECT * FROM gallery
+        ORDER BY id`;
 
     pool.query(queryText)
         .then(response => {
