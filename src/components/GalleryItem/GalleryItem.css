@@ -90,6 +90,7 @@
       top: var(--delete-offset);
       right: var(--delete-offset);
       opacity: 0;
+      transition: opacity .5s;
   }
 
   .item-container:hover .delete-container {
