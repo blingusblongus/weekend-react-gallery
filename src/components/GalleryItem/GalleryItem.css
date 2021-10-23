@@ -46,9 +46,9 @@
     right: var(--bottom-right-offset);
     width: 20px;
     height: 20px;
-    font-size: 140%;
-    transform: translate(-50%, -50%);
+    font-size: 160%;
     cursor: pointer;
+    text-align: center;
 }
 
 /* .lower-right:active {
@@ -57,14 +57,14 @@
 
 .fa-heart {
     color: rgb(233, 44, 44);
+    transform: translate(-50%, -50%);
 }
 
 .like-number {
-    font-size: 50%;
-    padding-top: 6px;
-    padding-left: 2px;
+    font-size: 40%;
     text-align: center;
     color: white;
+    transform: translate(-50%, -50%);
 }
 
 /* Grabbed from stackexchange to disable text selection */
