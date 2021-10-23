@@ -1,6 +1,7 @@
 :root {
     --dimension: 200px;
-    --bottom-right-offset: 1%;
+    --like-offset: 1%;
+    --delete-offset: 5%;
 }
 
 .item-container {
@@ -42,8 +43,8 @@
 
 .lower-right {
     position: absolute;
-    bottom: var(--bottom-right-offset);
-    right: var(--bottom-right-offset);
+    bottom: var(--like-offset);
+    right: var(--like-offset);
     width: 20px;
     height: 20px;
     font-size: 160%;
@@ -82,4 +83,19 @@
     transform: translateX(-20%)
         translateY(-20%)
         scale(1.5);
+  }
+
+  .delete-container {
+      position: absolute;
+      top: var(--delete-offset);
+      right: var(--delete-offset);
+      opacity: 0;
+  }
+
+  .item-container:hover .delete-container {
+      opacity: 1;
+  }
+
+  .text-white {
+      color: white;
   }

@@ -12,13 +12,23 @@ export default function GalleryItem({item, getPhotos}){
 
     // PUT request to add a like
     const addLike = () => {
-        Axios.put(`gallery/like/${item.id}`)
+        Axios.put(`/gallery/like/${item.id}`)
             .then(response => {
                 console.log('Like incremented');
                 getPhotos();
             }).catch(err => {
                 console.log('couldn\'t PUT like', err);
             })
+    }
+
+    const deleteItem = () => {
+        Axios.delete(`/gallery/${item.id}`)
+            .then(response => {
+                console.log('Delete Success')
+                getPhotos();
+            }).catch(err => {
+                console.log('DELETE err', err);
+            });
     }
 
     // conditionally renders dim and description based on showDescription
@@ -44,6 +54,13 @@ export default function GalleryItem({item, getPhotos}){
                 <div className="lower-right noselect">
                     <div className="like-number">{item.likes}</div>
                 </div>
+            </div>
+            
+            <div className="delete-container" 
+                onClick={deleteItem}>
+                <i className={showDescription ?
+                    "fas fa-times text-white" :
+                    "fas fa-times"}></i>
             </div>
         </div>
     )
