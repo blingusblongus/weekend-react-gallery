@@ -32,6 +32,7 @@ function App() {
         </header>
         <GalleryForm getPhotos={getPhotos}/>
         <GalleryList galleryItems={galleryItems} getPhotos={getPhotos} />
+
       </div>
     );
 }

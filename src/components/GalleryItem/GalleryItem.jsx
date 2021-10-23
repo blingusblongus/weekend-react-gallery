@@ -42,10 +42,14 @@ export default function GalleryItem({item, getPhotos}){
             onClick={toggleDescription}
             />
 
-            {showDescription && 
-            <div className="item-description noselect" onClick={toggleDescription}>
+            {/* Description appears based on state */}
+            <div className={showDescription ?
+            "item-description noselect" :
+            "item-description noselect invisible"}
+            
+             onClick={toggleDescription}>
                 {item.description}
-            </div>}
+            </div>
             
             <div onClick={addLike} className="like-button">
                 <div className="lower-right">
@@ -56,11 +60,12 @@ export default function GalleryItem({item, getPhotos}){
                 </div>
             </div>
             
-            <div className="delete-container" 
+
+            <div className={showDescription ?
+                "delete-container text-white" :
+                "delete-container"} 
                 onClick={deleteItem}>
-                <i className={showDescription ?
-                    "fas fa-times text-white" :
-                    "fas fa-times"}></i>
+                <i className="fas fa-times"></i>
             </div>
         </div>
     )
