@@ -77,3 +77,9 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+
+  .like-button:active {
+    transform: translateX(-20%)
+        translateY(-20%)
+        scale(1.5);
+  }
