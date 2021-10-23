@@ -31,10 +31,12 @@ export default function GalleryItem({item, getPhotos}){
             src={item.path} 
             onClick={toggleDescription}
             />
+
             {showDescription && 
             <div className="item-description noselect" onClick={toggleDescription}>
                 {item.description}
             </div>}
+            
             <div onClick={addLike}>
                 <div className="lower-right">
                     <i className="fas fa-heart"></i>
