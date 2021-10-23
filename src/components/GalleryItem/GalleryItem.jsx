@@ -8,7 +8,6 @@ export default function GalleryItem({item, getPhotos}){
     // flips showDescription bool on image click
     const toggleDescription = () => {
         setShowDescription(!showDescription);
-        console.log('description:', showDescription);
     }
 
     // PUT request to add a like
