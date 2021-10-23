@@ -1,5 +1,6 @@
 :root {
     --dimension: 200px;
+    --bottom-right-offset: 1%;
 }
 
 .item-container {
@@ -35,5 +36,44 @@
 }
 
 .dim {
-    opacity: .5;
+    opacity: .4;
+    filter: grayscale(80%);
 }
+
+.lower-right {
+    position: absolute;
+    bottom: var(--bottom-right-offset);
+    right: var(--bottom-right-offset);
+    width: 20px;
+    height: 20px;
+    font-size: 140%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* .lower-right:active {
+    transform: scale(1.24);
+} */
+
+.fa-heart {
+    color: rgb(233, 44, 44);
+}
+
+.like-number {
+    font-size: 50%;
+    padding-top: 6px;
+    padding-left: 2px;
+    text-align: center;
+    color: white;
+}
+
+/* Grabbed from stackexchange to disable text selection */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
