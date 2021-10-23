@@ -7,7 +7,10 @@ export default function GalleryList ({galleryItems, getPhotos}) {
     return (
         <div className="list-container">
             {galleryItems.map(item => {
-                return <GalleryItem key={item.id} item={item}/>
+                return <GalleryItem 
+                    key={item.id} 
+                    item={item}
+                    getPhotos={getPhotos}/>
             })}
         </div>
     )
