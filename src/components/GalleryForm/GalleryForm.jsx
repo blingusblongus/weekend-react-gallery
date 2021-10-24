@@ -41,7 +41,6 @@ export default function GalleryForm({getPhotos}) {
                 variant="outlined"
                 value={path}
                 size="small"
-                backgroundColor="black"
                 required
                 >
             </TextField>

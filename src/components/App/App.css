@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,10 +19,8 @@
   font-size: 1.5em;
 }
 
-body {
-  /* background: linear-gradient(0deg, rgb(191, 205, 206) 0%, 
-  rgb(244, 255, 255) 100%); */
-  height: 100vh;
+
+#page-bg {
   width: 100vw;
-  background-attachment: fixed;
+  height: 100vw;
 }

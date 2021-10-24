@@ -28,6 +28,7 @@ function App() {
       <div className="App" style={{
         backgroundImage: 'url(images/cat-space.gif)'
       }}>
+        
         <Header />
         <main>
           <GalleryForm getPhotos={getPhotos}/>
