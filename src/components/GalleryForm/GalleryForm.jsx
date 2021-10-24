@@ -1,6 +1,9 @@
 import Axios from "axios";
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import { TextField } from "@mui/material/";
 import './GalleryForm.css';
+
 
 export default function GalleryForm({getPhotos}) {
     const [path, setPath] = useState('');
@@ -24,16 +27,25 @@ export default function GalleryForm({getPhotos}) {
     }
 
     return (
+        <>
+        <h3 className="photo-label">Submit a Photo</h3>
         <form className="input-form">
-            <div className="form-group">
-                <label htmlFor="path-in">Image URL:</label>
-                <input id="path-in" className="form-item" onChange={(e) => setPath(e.target.value)} type="text" placeholder="Image URL"></input>
-            </div>
-            <div className="form-group">
-                <label htmlFor="description-in">Description:</label>
-                <input id="description-in" className="form-item" onChange={(e) => setDescription(e.target.value)} type="text" placeholder="Description"></input>
-            </div>
-            <button onClick={addItem} className="form-item">Add</button>
+            <TextField 
+                id="path-in" 
+                className="form-item" 
+                onChange={(e) => setPath(e.target.value)}
+                label="Image URL"
+                variant="outlined"
+                required>
+            </TextField>
+            <TextField 
+                className="form-item" 
+                onChange={(e) => setDescription(e.target.value)} 
+                label="Description"
+                required>
+            </TextField>
+            <Button onSubmit={addItem} className="form-item" variant="contained">Add</Button>
         </form>
+        </>
     )
 }

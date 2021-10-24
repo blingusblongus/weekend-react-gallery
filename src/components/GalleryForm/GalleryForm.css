@@ -1,12 +1,26 @@
+.photo-label {
+    display: block;
+}
+
 .input-form {
-    display: grid;
-    width: 70%;
-    margin: 10px auto;
-    grid-template-columns: 2fr 2fr 1fr;
-    
+    margin: 20px;
 }
 
 .form-item {
-    margin: 20px;
-    width: 15vw;
+    width: 100%;
+    min-width: 100px;
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+    .input-form {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .form-item {
+        width: 30vw;
+        min-width: 100px;
+    }
 }
