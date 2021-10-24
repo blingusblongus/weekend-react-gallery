@@ -8,6 +8,8 @@ A full-stack CRUD application to display stored photos and their descriptions, t
 
 ## Screen Shot
 
+![Gallery App](images/screenshot.png)
+
 ## Prerequisites
 
 -Node.js
@@ -40,3 +42,7 @@ A full-stack CRUD application to display stored photos and their descriptions, t
 ## Acknowledgements
 
 Thanks to Prime Digital Academy, who equipped me to make this application a reality!
+
+## Support
+
+If you have questions about this app, please email rutherford.t.b@gmail.com
