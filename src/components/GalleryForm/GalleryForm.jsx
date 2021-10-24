@@ -11,6 +11,7 @@ export default function GalleryForm({getPhotos}) {
     
     const addItem = (e) => {
         e.preventDefault();
+        console.log('clicked')
 
         const data = {
             path: path,
@@ -21,6 +22,8 @@ export default function GalleryForm({getPhotos}) {
             .then(response => {
                 console.log('Successful POST');
                 getPhotos();
+                setPath('');
+                setDescription('');
             }).catch(err => {
                 console.log('Post problem:', err);
             })
@@ -29,22 +32,34 @@ export default function GalleryForm({getPhotos}) {
     return (
         <>
         <h3 className="photo-label">Submit a Photo</h3>
-        <form className="input-form">
+        <form className="input-form" onSubmit={addItem}>
             <TextField 
                 id="path-in" 
                 className="form-item" 
                 onChange={(e) => setPath(e.target.value)}
                 label="Image URL"
                 variant="outlined"
-                required>
+                value={path}
+                size="small"
+                required
+                >
             </TextField>
             <TextField 
                 className="form-item" 
                 onChange={(e) => setDescription(e.target.value)} 
                 label="Description"
-                required>
+                value={description}
+                size="small"
+                required
+                >
             </TextField>
-            <Button onSubmit={addItem} className="form-item" variant="contained">Add</Button>
+            <Button 
+                // onClick={addItem} 
+                type="submit" 
+                className="form-item" 
+                variant="contained">
+                    Add
+            </Button>
         </form>
         </>
     )

@@ -13,7 +13,9 @@ VALUES
 ('images/confusedCat.jpg', 'Photo of a cat with imposter syndrome.'),
 ('images/neckCat.png', 'Photo of a cat that''s a little taken aback.'),
 ('images/sleepyCat.png', 'Photo of a very tired cat.'),
-('images/angryCat.png', 'Photo of a cat that has been angered.');
+('images/angryCat.png', 'Photo of a cat that has been angered.'),
+('images/constructionCat.jpg', 'Photo of a cat on the job.'),
+('images/sittingCat.jpg', 'Photo of a cat...with knees?');
 
 SELECT * FROM gallery;
 
