@@ -108,6 +108,10 @@
       opacity: 1;
   }
 
+  .delete-container:hover {
+      cursor: pointer;
+  }
+
   .text-white {
       color: white;
   }
