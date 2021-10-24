@@ -1,0 +1,26 @@
+.photo-label {
+    display: block;
+}
+
+.input-form {
+    margin: 20px;
+}
+
+.form-item {
+    width: 100%;
+    min-width: 100px;
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+    .input-form {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .form-item {
+        width: 30vw;
+        min-width: 100px;
+    }
+}
