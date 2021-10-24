@@ -12,9 +12,9 @@ A full-stack CRUD application to display stored photos and their descriptions, t
 
 ## Prerequisites
 
--Node.js
--PostgreSQL
--PostgreSQL client like Postico
+- Node.js
+- PostgreSQL
+- PostgreSQL client like Postico
 
 ## Installation
 
