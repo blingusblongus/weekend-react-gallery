@@ -2,13 +2,13 @@ import Axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import GalleryForm from '../GalleryForm/GalleryForm';
 import GalleryList from '../GalleryList/GalleryList';
+import Header from '../Header/Header';
 import './App.css';
 
 function App() {
-
   const [galleryItems, setGalleryItems] = useState([]);
 
-
+  // Retrieve photos from server/db
   const getPhotos = () => {
     Axios.get('/gallery')
       .then(response => {
@@ -19,20 +19,17 @@ function App() {
       })
   }
 
+  // On Load, get data from server
   useEffect(() => {
     getPhotos();
   }, []);
-
-  console.log('galleryItems:', galleryItems);
   
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
+        <Header />
         <main>
-        <GalleryForm getPhotos={getPhotos}/>
-        <GalleryList galleryItems={galleryItems} getPhotos={getPhotos} />
+          <GalleryForm getPhotos={getPhotos}/>
+          <GalleryList galleryItems={galleryItems} getPhotos={getPhotos} />
         </main>
       </div>
     );
