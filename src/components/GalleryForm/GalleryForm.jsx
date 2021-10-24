@@ -27,40 +27,44 @@ export default function GalleryForm({getPhotos}) {
             }).catch(err => {
                 console.log('Post problem:', err);
             })
+
     }
 
     return (
         <>
-        <h3 className="photo-label">Submit a Photo</h3>
+        
         <form className="input-form" onSubmit={addItem}>
-            <TextField 
-                id="path-in" 
-                className="form-item" 
-                onChange={(e) => setPath(e.target.value)}
-                label="Image URL"
-                variant="outlined"
-                value={path}
-                size="small"
-                required
-                >
-            </TextField>
-            <TextField 
-                className="form-item" 
-                onChange={(e) => setDescription(e.target.value)} 
-                label="Description"
-                variant="outlined"
-                value={description}
-                size="small"
-                required
-                >
-            </TextField>
-            <Button 
-                // onClick={addItem} 
-                type="submit" 
-                className="form-item" 
-                variant="contained">
-                    Add
-            </Button>
+            <h3 className="photo-label">Submit a Photo</h3>
+            <div className="form-items">
+                <TextField 
+                    id="path-in" 
+                    className="form-item" 
+                    onChange={(e) => setPath(e.target.value)}
+                    label="Image URL"
+                    variant="outlined"
+                    value={path}
+                    size="small"
+                    required
+                    >
+                </TextField>
+                <TextField 
+                    className="form-item" 
+                    onChange={(e) => setDescription(e.target.value)} 
+                    label="Description"
+                    variant="outlined"
+                    value={description}
+                    size="small"
+                    required
+                    >
+                </TextField>
+                <Button 
+                    // onClick={addItem} 
+                    type="submit" 
+                    className="form-item" 
+                    variant="contained">
+                        Add
+                </Button>
+            </div>
         </form>
         </>
     )
