@@ -38,6 +38,8 @@
     font-weight: bold;
     opacity: 1;
     transition: opacity .5s;
+    word-wrap: break-word;
+    max-width: var(--dimension);
 }
 
 .dim {
