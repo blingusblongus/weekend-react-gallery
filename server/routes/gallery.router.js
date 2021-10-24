@@ -20,7 +20,6 @@ const pool = require('../modules/pool.js');
 
 // DB PUT
 router.put('/like/:id', (req, res) => {
-    console.log(req.params);
     const galleryId = req.params.id;
     const queryText = `UPDATE gallery
         SET likes = likes + 1

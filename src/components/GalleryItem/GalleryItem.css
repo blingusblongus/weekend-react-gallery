@@ -11,6 +11,7 @@
     height: var(--dimension);
     background-color: black;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
 }
 
 .item-image {
