@@ -25,7 +25,9 @@ function App() {
   }, []);
   
     return (
-      <div className="App">
+      <div className="App" style={{
+        backgroundImage: 'url(images/cat-space.gif)'
+      }}>
         <Header />
         <main>
           <GalleryForm getPhotos={getPhotos}/>

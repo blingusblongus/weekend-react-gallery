@@ -41,6 +41,7 @@ export default function GalleryForm({getPhotos}) {
                 variant="outlined"
                 value={path}
                 size="small"
+                backgroundColor="black"
                 required
                 >
             </TextField>
@@ -48,6 +49,7 @@ export default function GalleryForm({getPhotos}) {
                 className="form-item" 
                 onChange={(e) => setDescription(e.target.value)} 
                 label="Description"
+                variant="outlined"
                 value={description}
                 size="small"
                 required
