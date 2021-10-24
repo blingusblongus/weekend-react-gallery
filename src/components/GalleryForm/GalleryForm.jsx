@@ -1,5 +1,6 @@
 import Axios from "axios";
-import { useState } from "react"
+import { useState } from "react";
+import './GalleryForm.css';
 
 export default function GalleryForm({getPhotos}) {
     const [path, setPath] = useState('');
@@ -23,10 +24,16 @@ export default function GalleryForm({getPhotos}) {
     }
 
     return (
-        <form>
-            <input onChange={(e) => setPath(e.target.value)} type="text" placeholder="Image URL"></input>
-            <input onChange={(e) => setDescription(e.target.value)} type="text" placeholder="Description"></input>
-            <button onClick={addItem}>Add</button>
+        <form className="input-form">
+            <div className="form-group">
+                <label htmlFor="path-in">Image URL:</label>
+                <input id="path-in" className="form-item" onChange={(e) => setPath(e.target.value)} type="text" placeholder="Image URL"></input>
+            </div>
+            <div className="form-group">
+                <label htmlFor="description-in">Description:</label>
+                <input id="description-in" className="form-item" onChange={(e) => setDescription(e.target.value)} type="text" placeholder="Description"></input>
+            </div>
+            <button onClick={addItem} className="form-item">Add</button>
         </form>
     )
 }

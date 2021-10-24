@@ -1,0 +1,12 @@
+.input-form {
+    display: grid;
+    width: 70%;
+    margin: 10px auto;
+    grid-template-columns: 2fr 2fr 1fr;
+    
+}
+
+.form-item {
+    margin: 20px;
+    width: 15vw;
+}
