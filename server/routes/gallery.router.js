@@ -56,6 +56,12 @@ router.get('/', (req, res) => {
 
 //POST Route DB
 router.post('/', (req, res) => {
+    // Validation
+    if(!(req.body.path && req.body.description)){
+        res.sendStatus(400);
+        return;
+    }
+    
     const queryText = `INSERT INTO gallery
         (path, description)
         VALUES ($1, $2);`;

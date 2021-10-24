@@ -40,6 +40,7 @@ export default function GalleryForm({getPhotos}) {
                 label="Image URL"
                 variant="outlined"
                 value={path}
+                size="small"
                 required
                 >
             </TextField>
@@ -48,6 +49,7 @@ export default function GalleryForm({getPhotos}) {
                 onChange={(e) => setDescription(e.target.value)} 
                 label="Description"
                 value={description}
+                size="small"
                 required
                 >
             </TextField>
